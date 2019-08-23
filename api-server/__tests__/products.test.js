@@ -63,11 +63,12 @@ describe('Products API', () => {
           price: 10,
           category: 'books'
         };
-        return mockRequest.post('/products').
+        return mockRequest.post('/api/v1/products').
             send(testProduct).
             then(data => {
-              return mockRequest.delete(`products/${data.body._id}`).
-                  then(response => {
+            console.log(data.body);
+              return mockRequest.delete(`/api/v1/products/${data.body._id}`)
+              .then(response => {
                     expect(response.status).toEqual(200);
                   })
             });

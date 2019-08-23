@@ -29,7 +29,7 @@ function getProducts(request,response,next) {
 
 function getProduct(request,response,next) {
   // expects an array with one object in it
-  products.get(request.params.id)
+  products.get('/', request.params.id)
   .then( result => response.status(200).json(result) )
   .catch( next );
 }

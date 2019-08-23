@@ -5,6 +5,7 @@ const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan');
 
+
 //Custom Routes
 const categoryRoutes = require('../routes/categories-routes');
 const productRoutes = require('../routes/products-routes');
@@ -23,11 +24,8 @@ app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
-app.get('/categories', categoryRoutes.get);
-app.post('/categories', categoryRoutes.post);
-app.get('/products', productRoutes.get);
-app.post('/products', productRoutes.post);
-
+app.use(categoryRoutes);
+app.use(productRoutes);
 
 app.use(notFound);
 app.use(errorHandler);

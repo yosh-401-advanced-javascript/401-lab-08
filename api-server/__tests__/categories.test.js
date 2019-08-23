@@ -9,13 +9,12 @@ const mockRequest = supergoose(server);
 
 
 describe('Categories API', () => {
-  test(
+ test(
       'Creating a new category. Should return 201 and the created object',
       () => {
         const testCategory = {
           name: 'Food',
           description: 'Soba'
-
         };
 
         return mockRequest.post('/categories')
@@ -31,8 +30,8 @@ describe('Categories API', () => {
         let testCategory = {
           name: 'Food',
           description: 'Soba'
-
         };
+
         return mockRequest.get('/categories').
             send(testCategory).
             then(response => {
@@ -40,7 +39,7 @@ describe('Categories API', () => {
               expect(response.text).toContain('Food');
             });
       });
-  test(
+ test(
       'Updating an old category. Should return a 200 and the updated object',
       () => {
         let testCategory = {
@@ -56,7 +55,7 @@ describe('Categories API', () => {
               expect(response.text).toContain('Udon');
             })
       });
-  test(
+ test(
       'Deletes an old category. Should return a 200 and remove the object',
       () => {
         let testCategory = {

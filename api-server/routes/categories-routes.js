@@ -9,6 +9,8 @@ const categories = new Categories();
 
 
 
+
+
 //ROUTES
 router.get('/categories', getCategories);
 router.post('/categories', postCategories);
@@ -20,8 +22,9 @@ router.delete('/categories/:id', deleteCategories);
 //HANDLERS
 function getCategories(request,response,next) {
   // expects an array of object to be returned from the model
-  categories.get('/')
+  categories.get()
   .then( data => {
+    console.log('here');
     const output = {
       count: data.length,
       results: data,

@@ -13,7 +13,18 @@
 *
 
 ### Modules
-#### `server.js`
+#### `app.js`
+#### `models`
+####    `categories`
+####    `products`
+####    `mongo.js`
+#### `routes`
+#### `src`
+####    `middleware`
+####    `app.js`
+#### `.env`
+#### `index.js`
+####    
 ##### Exported Values and Methods
 
 ###### `start() -> starts listening`
@@ -26,10 +37,12 @@
 * `npm start`
 * Endpoint: `/categories`
   * Returns a JSON object with category objects in it.
+  * Endpoint: `/products`
+    * Returns a JSON object with products objects in it.
   
 #### Tests
 * `npm run test`
 
 #### UML
-
+![UML](./assets/uml-08.png)
 
