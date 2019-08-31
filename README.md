@@ -6,7 +6,7 @@
 
 ### Links and Resources
 * [submission PR](https://github.com/yosh-401-advanced-javascript/401-lab-08/pull/1
-* [travis](http://xyz.com)
+* [travis](https://travis-ci.com/yosh-401-advanced-javascript/401-lab-08.svg?branch=master)
 * [front-end](http://xyz.com) (when applicable)
 
 #### Documentation
